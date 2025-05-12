@@ -1,0 +1,10 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "typescript" // Добавьте поддержку TypeScript
+  ],
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
