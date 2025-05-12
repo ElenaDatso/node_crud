@@ -35,6 +35,8 @@ const isUUID = (id: string): boolean => {
   return uuidRegex.test(id);
 };
 
+const PORT = process.env.PORT ? Number(process.env.PORT) : 8080;
+
 const server = http.createServer((request, response) => {
   response.setHeader('Access-Control-Allow-Origin', '*');
   response.setHeader(
@@ -216,6 +218,6 @@ async function deleteUser(userId: string, resp: ResponseType) {
   resp.end();
 }
 
-server.listen(8080, () => {
-  console.log(`Server is running on port ${process.env.PORT || 8080}`);
+server.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
