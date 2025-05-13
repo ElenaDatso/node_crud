@@ -1,0 +1,19 @@
+{
+  "parser": "@typescript-eslint/parser", // Указываем парсер TypeScript
+  "parserOptions": {
+    "ecmaVersion": 2020, // Указываем версию ECMAScript
+    "sourceType": "module", // Используем модули ES6
+    "ecmaFeatures": {
+      "jsx": true // Если используете JSX
+    }
+  },
+  "plugins": ["@typescript-eslint"], // Включаем плагин для TypeScript
+  "extends": [
+    "eslint:recommended", // Стандартные рекомендации ESLint
+    "plugin:@typescript-eslint/recommended" // Рекомендуемые правила для TypeScript
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "warn", // Например, предупреждения для использования any
+    "@typescript-eslint/explicit-module-boundary-types": "off" // Отключаем требование типов для возвращаемых значений функций (если не нужно)
+  }
+}
